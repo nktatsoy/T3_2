@@ -87,30 +87,29 @@ public class Main{
         String[] spliteds;
         String first=null,second=null;
         String opr=null;
-        int answer=0;
         int a,b;
         RomeNumbers c=new RomeNumbers("XXX");
 
 
         try{
-            if(s.contains("+")){
+            if(s.contains(" + ")){
                 opr="+";
-                spliteds = s.split(Pattern.quote("+"), 2);
+                spliteds = s.split(Pattern.quote(" + "), 2);
                 first=spliteds[0];
                 second=spliteds[1];
-            }else if(s.contains("-")){
+            }else if(s.contains(" - ")){
                 opr="-";
-                spliteds = s.split(Pattern.quote("-"), 2);
+                spliteds = s.split(Pattern.quote(" - "), 2);
                 first=spliteds[0];
                 second=spliteds[1];
-            }else if(s.contains("*")){
+            }else if(s.contains(" * ")){
                 opr="*";
-                spliteds = s.split(Pattern.quote("*"), 2);
+                spliteds = s.split(Pattern.quote(" * "), 2);
                 first=spliteds[0];
                 second=spliteds[1];
-            }else if(s.contains("/")){
+            }else if(s.contains(" / ")){
                 opr="/";
-                spliteds = s.split(Pattern.quote("/"), 2);
+                spliteds = s.split(Pattern.quote(" / "), 2);
                 first=spliteds[0];
                 second=spliteds[1];
             }
@@ -191,6 +190,7 @@ public class Main{
             } catch (MyException e1) {
                 System.out.println(e1.str);
                 System.exit(0);
+
             }
 
         }
